@@ -1,0 +1,15 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# OSX files
+.DS_Store
+
+# Python package files
+*.egg-info/
+
+# ide
+.idea/
+
+# pytest
+.pytest_cache/
