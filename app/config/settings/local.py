@@ -1,4 +1,5 @@
 from config.settings.base import *
+import django_heroku
 
 SECRET_KEY = 'sp(j(ts6ri()muwz-$^i+k+jgjfv$jbgs@9oq@lzy6x5@lynqd'
 
@@ -46,3 +47,4 @@ LOGGING = {
         }
     },
 }
+django_heroku.settings(local())
