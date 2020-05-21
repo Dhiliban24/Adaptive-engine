@@ -8,7 +8,7 @@ INSTALLED_APPS += [
     'django_extensions',
 ]
 
-ALLOWED_HOSTS += ['localhost', 'engine','127.0.0.1']
+ALLOWED_HOSTS += ['localhost', 'engine','127.0.0.1','*']
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -23,7 +23,8 @@ DATABASES = {
         'PORT': 5432,
     }
 }
-
+db_from_env=dj_database_url.congif(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 # Logging settings
 LOGGING = {
     'version': 1,
@@ -48,4 +49,4 @@ LOGGING = {
         }
     },
 }
-django_heroku.settings(local())
+
